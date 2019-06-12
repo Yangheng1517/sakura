@@ -10,4 +10,5 @@ import com.stx.entity.user;
 */
 public interface UserDao {
 	public user getuser(String uname);
+	public int saveuser(user us);
 }

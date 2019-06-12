@@ -11,7 +11,32 @@ public class user {
 	private String upass;
 	private String usex;
 	private int uage;
+	private String upower;
 	
+	
+	public user(int uid, String uname, String upass, String usex, int uage) {
+		super();
+		this.uid = uid;
+		this.uname = uname;
+		this.upass = upass;
+		this.usex = usex;
+		this.uage = uage;
+	}
+	public String getUpower() {
+		return upower;
+	}
+	public void setUpower(String upower) {
+		this.upower = upower;
+	}
+	public user(int uid, String uname, String upass, String usex, int uage, String upower) {
+		super();
+		this.uid = uid;
+		this.uname = uname;
+		this.upass = upass;
+		this.usex = usex;
+		this.uage = uage;
+		this.upower = upower;
+	}
 	public user(String uname, String upass, String usex, int uage) {
 		super();
 		this.uname = uname;
@@ -22,14 +47,7 @@ public class user {
 	public user() {
 		super();
 	}
-	public user(int uid, String uname, String upass, String usex, int uage) {
-		super();
-		this.uid = uid;
-		this.uname = uname;
-		this.upass = upass;
-		this.usex = usex;
-		this.uage = uage;
-	}
+
 	public int getUid() {
 		return uid;
 	}

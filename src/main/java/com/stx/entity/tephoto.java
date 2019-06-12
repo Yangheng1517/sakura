@@ -10,6 +10,24 @@ public class tephoto {
 	private String tename;
 	private int teage;
 	private String tesex;
+	private String teintro;
+	
+	
+	public tephoto(String tename, int teage, String tesex, String teintro) {
+		super();
+		this.tename = tename;
+		this.teage = teage;
+		this.tesex = tesex;
+		this.teintro = teintro;
+	}
+	public tephoto(int teid, String tename, int teage, String tesex, String teintro) {
+		super();
+		this.teid = teid;
+		this.tename = tename;
+		this.teage = teage;
+		this.tesex = tesex;
+		this.teintro = teintro;
+	}
 	public tephoto(int teid, String tename, int teage, String tesex) {
 		super();
 		this.teid = teid;
@@ -49,6 +67,12 @@ public class tephoto {
 	}
 	public void setTesex(String tesex) {
 		this.tesex = tesex;
+	}
+	public String getTeintro() {
+		return teintro;
+	}
+	public void setTeintro(String teintro) {
+		this.teintro = teintro;
 	}
 	
 }

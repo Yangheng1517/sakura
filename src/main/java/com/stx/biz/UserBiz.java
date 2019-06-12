@@ -10,4 +10,5 @@ import com.stx.entity.user;
 
 public interface UserBiz {
 	public user login(user us);
+	public int reguser(user us);
 }

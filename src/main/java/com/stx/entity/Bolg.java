@@ -8,22 +8,22 @@ package com.stx.entity;
 
 import java.util.Date;
 
-public class bolg {
+public class Bolg {
 	private int bid;
 	private String bname;
 	private String bcon;
 	private Date btime;
-	public bolg() {
+	public Bolg() {
 		super();
 	}
-	public bolg(int bid, String bname, String bcon, Date btime) {
+	public Bolg(int bid, String bname, String bcon, Date btime) {
 		super();
 		this.bid = bid;
 		this.bname = bname;
 		this.bcon = bcon;
 		this.btime = btime;
 	}
-	public bolg(String bname, String bcon, Date btime) {
+	public Bolg(String bname, String bcon, Date btime) {
 		super();
 		this.bname = bname;
 		this.bcon = bcon;
@@ -55,3 +55,4 @@ public class bolg {
 	}
 	
 }
+

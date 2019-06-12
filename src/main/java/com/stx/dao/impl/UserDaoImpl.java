@@ -18,10 +18,13 @@ import com.stx.entity.user;
 *<p>日期Jun 10, 2019 11:36:46 PM</p>
 *
 */
+
 @Repository
 public class UserDaoImpl implements UserDao {
+	
 	@Resource
 	private JdbcTemplate jdbcTemplate;
+	
 	@Override
 	public user getuser(String uname) {
 		String sql = "select * from user where uname=?";
@@ -32,10 +35,9 @@ public class UserDaoImpl implements UserDao {
 		} catch (Exception e) {
 			return us;
 		}
-		
-		
 		return us;
 	}
+	
 	private class BeanRowMapper implements RowMapper<user>{
 		@Override
 		public user mapRow(ResultSet rs, int rowNum) throws SQLException{
@@ -47,5 +49,13 @@ public class UserDaoImpl implements UserDao {
 			user us = new user(uid, uname, upass, usex, uage);
 			return us;
 		}
+	}
+	
+	@Override
+	public int saveuser(user us) {
+		String sql ="insert into user values(?,?,?,?)";
+		Object[] na = {us.getUname(),us.getUpass(),us.getUage(),us.getUsex()};
+		int unm = jdbcTemplate.update(sql, na);
+		return unm;
 	}
 }

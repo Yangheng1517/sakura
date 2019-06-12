@@ -27,5 +27,9 @@ public class UserBizImpl implements UserBiz {
 		
 		return null;
 	}
+	@Override
+	public int reguser(user us) {
+		return userDao.saveuser(us);
+	}
 
 }

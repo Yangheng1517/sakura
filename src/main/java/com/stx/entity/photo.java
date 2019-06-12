@@ -10,6 +10,25 @@ public class photo {
 	private String pname;
 	private int page;
 	private String psex;
+	private String pintro;
+	
+	
+	
+	public photo(String pname, int page, String psex, String pintro) {
+		super();
+		this.pname = pname;
+		this.page = page;
+		this.psex = psex;
+		this.pintro = pintro;
+	}
+	public photo(int pid, String pname, int page, String psex, String pintro) {
+		super();
+		this.pid = pid;
+		this.pname = pname;
+		this.page = page;
+		this.psex = psex;
+		this.pintro = pintro;
+	}
 	public photo(int pid, String pname, int page, String psex) {
 		super();
 		this.pid = pid;
@@ -49,6 +68,12 @@ public class photo {
 	}
 	public void setPsex(String psex) {
 		this.psex = psex;
+	}
+	public String getPintro() {
+		return pintro;
+	}
+	public void setPintro(String pintro) {
+		this.pintro = pintro;
 	}
 	
 }

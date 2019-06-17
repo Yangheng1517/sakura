@@ -53,7 +53,7 @@ public class UserDaoImpl implements UserDao {
 	
 	@Override
 	public int saveuser(user us) {
-		String sql ="insert into user values(?,?,?,?)";
+		String sql ="insert into user(uname,upass,uage,usex) values(?,?,?,?)";
 		Object[] na = {us.getUname(),us.getUpass(),us.getUage(),us.getUsex()};
 		int unm = jdbcTemplate.update(sql, na);
 		return unm;

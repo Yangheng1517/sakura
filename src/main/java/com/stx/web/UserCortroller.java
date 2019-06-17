@@ -30,13 +30,13 @@ public class UserCortroller {
 	}
 	@RequestMapping("/toreg.do")
 	public String toreg() {
-		return "reg";
+		return "save";
 	}
 	
 	@RequestMapping(value="/login.do",method=RequestMethod.POST)
 	public ModelAndView login(user user,HttpSession session){
 		user myUser = userBiz.login(user);
-		ModelAndView mav1 = new ModelAndView("main");
+		ModelAndView mav1 = new ModelAndView("hello");
 		ModelAndView mav2 = new ModelAndView("login","Error","登录失败");
 		if(myUser!=null){
 			session.setAttribute("USER", myUser);

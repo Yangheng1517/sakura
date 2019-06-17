@@ -32,7 +32,10 @@ public class TePhotoDaoImpl implements TePhotoDao {
 		Object [] ob = {name};
 	
 		List<tephoto> li = jdbcTemplate.query(sqlString, ob,new BeanRowMapper());
-	
+		
+		
+		
+		
 		return li;
 	}
 	
@@ -72,4 +75,32 @@ public class TePhotoDaoImpl implements TePhotoDao {
 		return jdbcTemplate.update(sql,ob);
 	}
 
+
+	@Override
+	public List<tephoto> giveTePhoto() {
+		// TODO Auto-generated method stub
+		
+		String sqlString = "select * from tephoto ";
+		List<tephoto> li = jdbcTemplate.query(sqlString,new BeanRowMapper1());
+		
+		return li;
+	}
+
+	private class BeanRowMapper1 implements RowMapper<tephoto>{
+
+		@Override
+		public tephoto mapRow(ResultSet rs, int rowNum) throws SQLException {
+			// TODO Auto-generated method stub
+			
+			int teid = rs.getInt("teid");
+			String tename = rs.getString("tename");
+			int teage = rs.getInt("teage");
+			String tesex = rs.getString("tesex");
+			String teintro = rs.getString("teintro");
+			tephoto te = new tephoto(teid, tename, teage, tesex,teintro);
+			return te;
+		}
+		
+	}
+	
 }

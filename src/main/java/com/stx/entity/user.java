@@ -14,6 +14,12 @@ public class user {
 	private String upower;
 	
 	
+	
+	public user(String uname, String upass) {
+		super();
+		this.uname = uname;
+		this.upass = upass;
+	}
 	public user(int uid, String uname, String upass, String usex, int uage) {
 		super();
 		this.uid = uid;

@@ -12,6 +12,7 @@ import com.stx.entity.tephoto;
 */
 public interface TePhotoBiz {
 	public List<tephoto> foundTePhoto(String name);
+	public List<tephoto> giveTePhoto();
 	public int saveTePhoto(tephoto te);
 	public int delTePhoto(String name);
 }

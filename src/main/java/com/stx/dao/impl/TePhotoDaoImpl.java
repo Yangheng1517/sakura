@@ -50,7 +50,8 @@ public class TePhotoDaoImpl implements TePhotoDao {
 			int teage = rs.getInt("teage");
 			String tesex = rs.getString("tesex");
 			String teintro = rs.getString("teintro");
-			tephoto te = new tephoto(teid, tename, teage, tesex,teintro);
+			String tenum = rs.getString("tenum");
+			tephoto te = new tephoto(teid, tename, teage, tesex,teintro,tenum);
 			return te;
 		}
 		
@@ -60,8 +61,8 @@ public class TePhotoDaoImpl implements TePhotoDao {
 	@Override
 	public int saveTePhoto(tephoto te) {
 		// TODO Auto-generated method stub
-		String sql = "insert into user values(?,?,?,?)";
-		Object[] ob = {te.getTename(),te.getTeage(),te.getTesex(),te.getTeintro()};
+		String sql = "insert into tephoto(tename,teage,tesex,teintro,tenum) values(?,?,?,?,?)";
+		Object[] ob = {te.getTename(),te.getTeage(),te.getTesex(),te.getTeintro(),te.getTenum()};
 		int num = jdbcTemplate.update(sql, ob);
 		return num;
 	}
@@ -97,7 +98,8 @@ public class TePhotoDaoImpl implements TePhotoDao {
 			int teage = rs.getInt("teage");
 			String tesex = rs.getString("tesex");
 			String teintro = rs.getString("teintro");
-			tephoto te = new tephoto(teid, tename, teage, tesex,teintro);
+			String tenum = rs.getString("tenum");
+			tephoto te = new tephoto(teid, tename, teage, tesex,teintro,tenum);
 			return te;
 		}
 		

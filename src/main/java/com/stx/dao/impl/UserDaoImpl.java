@@ -46,7 +46,8 @@ public class UserDaoImpl implements UserDao {
 			String upass = rs.getString("upass");
 			int uage = rs.getInt("uage");
 			String usex = rs.getString("usex");
-			user us = new user(uid, uname, upass, usex, uage);
+			String upower = rs.getString("upower");
+			user us = new user(uid, uname, upass, usex, uage,upower);
 			return us;
 		}
 	}

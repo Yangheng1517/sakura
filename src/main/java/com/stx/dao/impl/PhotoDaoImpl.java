@@ -31,8 +31,8 @@ public class PhotoDaoImpl implements PhotoDao {
 	@Override
 	public int addPhoto(tephoto ph) {
 		// TODO Auto-generated method stub
-		String sql = "insert into photo values(?,?,?,?)";
-		Object[] ob = {ph.getTename(),ph.getTeage(),ph.getTesex(),ph.getTeintro()};
+		String sql = "insert into photo(pname,page,psex,pintro,pnum) values(?,?,?,?,?)";
+		Object[] ob = {ph.getTename(),ph.getTeage(),ph.getTesex(),ph.getTeintro(),ph.getTenum()};
 		return jdbcTemplate.update(sql, ob);
 	}
 
@@ -58,7 +58,8 @@ public class PhotoDaoImpl implements PhotoDao {
 			int age = rs.getInt("page");
 			String sex = rs.getString("psex");
 			String intro = rs.getString("pintro");
-			photo ph = new photo(id, name, age, sex,intro);
+			String pnum = rs.getString("pnum");
+			photo ph = new photo(id, name, age, sex,intro,pnum);
 			return ph;
 		}
 		

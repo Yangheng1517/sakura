@@ -11,7 +11,7 @@ public class photo {
 	private int page;
 	private String psex;
 	private String pintro;
-	
+	private String pnum;
 	
 	
 	public photo(String pname, int page, String psex, String pintro) {
@@ -21,6 +21,32 @@ public class photo {
 		this.psex = psex;
 		this.pintro = pintro;
 	}
+	
+	
+	
+	public photo(String pname, int page, String psex, String pintro, String pnum) {
+		super();
+		this.pname = pname;
+		this.page = page;
+		this.psex = psex;
+		this.pintro = pintro;
+		this.pnum = pnum;
+	}
+
+
+
+	public photo(int pid, String pname, int page, String psex, String pintro, String pnum) {
+		super();
+		this.pid = pid;
+		this.pname = pname;
+		this.page = page;
+		this.psex = psex;
+		this.pintro = pintro;
+		this.pnum = pnum;
+	}
+
+
+
 	public photo(int pid, String pname, int page, String psex, String pintro) {
 		super();
 		this.pid = pid;
@@ -74,6 +100,18 @@ public class photo {
 	}
 	public void setPintro(String pintro) {
 		this.pintro = pintro;
+	}
+
+
+
+	public String getPnum() {
+		return pnum;
+	}
+
+
+
+	public void setPnum(String pnum) {
+		this.pnum = pnum;
 	}
 	
 }

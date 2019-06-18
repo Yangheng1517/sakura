@@ -48,6 +48,15 @@ public class TephtotCoreroller {
 		
 	}
 	
+//	@RequestMapping(value="/givetephoto.do",method=RequestMethod.POST)
+//	public ModelAndView givetephoto(HttpServletRequest request) {
+//		List<tephoto> li = tephotobiz.giveTePhoto();
+//		ModelAndView mav1 = new ModelAndView("中间");
+//		request.setAttribute("li", li);
+//		return mav1;
+//	}
+//	
+	
 	
 	@RequestMapping(value="/add.do",method=RequestMethod.POST)
 	public ModelAndView add(tephoto te) {

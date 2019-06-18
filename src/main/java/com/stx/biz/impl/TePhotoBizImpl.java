@@ -40,4 +40,11 @@ public class TePhotoBizImpl implements TePhotoBiz {
 		return tephotoDao.delTePhoto(name);
 	}
 
+	@Override
+	public List<tephoto> giveTePhoto() {
+		// TODO Auto-generated method stub
+		List<tephoto> li = tephotoDao.giveTePhoto();
+		return li;
+	}
+
 }
